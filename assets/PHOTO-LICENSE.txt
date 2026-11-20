@@ -1,0 +1,6 @@
+Nuernberg Panorama Nuremberg
+Photographer: Philipp Guttmann
+Source: https://commons.wikimedia.org/wiki/File:Nuernberg_Panorama_Nuremberg.jpg
+License: Creative Commons Attribution-ShareAlike 4.0 International
+https://creativecommons.org/licenses/by-sa/4.0/
+Changes: resized and encoded as WebP; displayed with responsive cropping and CSS overlays. The adapted image is available under the same CC BY-SA 4.0 license.
