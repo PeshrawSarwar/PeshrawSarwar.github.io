@@ -7,12 +7,12 @@ document.addEventListener('keydown', (event) => { if (event.key === 'Escape' && 
 document.addEventListener('click', (event) => { if (!event.target.closest('.site-header')) closeMenu(); });
 window.matchMedia('(min-width: 641px)').addEventListener('change', closeMenu);
 document.querySelector('#year').textContent = new Date().getFullYear();
-document.querySelector('.copy-email').addEventListener('click', async () => { const status = document.querySelector('#copy-status'); try { await navigator.clipboard.writeText('peshrawsarwar@gmail.com'); status.textContent = 'Email address copied.'; } catch { status.textContent = 'Select and copy: peshrawsarwar@gmail.com'; } });
+document.querySelector('.copy-email')?.addEventListener('click', async () => { const status = document.querySelector('#copy-status'); try { await navigator.clipboard.writeText('peshrawsarwar@gmail.com'); status.textContent = 'Email address copied.'; } catch { status.textContent = 'Select and copy: peshrawsarwar@gmail.com'; } });
 if ('IntersectionObserver' in window) { const observer = new IntersectionObserver(entries => { entries.forEach(entry => { const link = navigation.querySelector(`a[href="#${entry.target.id}"]`); if (link) { if (entry.isIntersecting) link.setAttribute('aria-current', 'location'); else link.removeAttribute('aria-current'); } }); }, { rootMargin: '-15% 0px -55% 0px' }); document.querySelectorAll('main section[id]').forEach(section => observer.observe(section)); }
 
 // Progressive motion: content stays visible if animation is unavailable.
 const motionPreference = window.matchMedia('(prefers-reduced-motion: reduce)');
-const motionTargets = document.querySelectorAll('.section-label, .about-grid > *, .section-heading, .career, .expertise > h2, .expertise-grid > article, .learning-grid > *, .contact-heading, .contact-grid');
+const motionTargets = document.querySelectorAll('.section-label, .about-grid > *, .section-heading, .career, .expertise > h2, .expertise-grid > article, .learning-grid > *, .contact-heading, .contact-grid, .blog-intro-grid, .blog-topics, .journal-empty, .blog-conversation');
 const runningMotion = new Set();
 function animateElement(element, frames, options) {
   if (motionPreference.matches || !element.animate) return;
